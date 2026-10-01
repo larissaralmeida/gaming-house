@@ -23,4 +23,24 @@ public class Station {
     @Enumerated(EnumType.STRING)
     private StationCondition condition;
 
+    public String getCode() {
+        return code;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+
+    public Station (String code, StationType type, StationCondition condition) {
+        this.code = code;
+        this.type = type;
+        this.condition = condition;
+    }
+
+    public Station() {}
+
+
+
+
 }
