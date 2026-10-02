@@ -14,7 +14,8 @@ public class StationService {
     public Station createStation(Station station) {
 
         if (stationRepository.existsByCode(station.getCode())) {
-            throw new IllegalArgumentException("Station already exists!");
+            throw new StationAlreadyExistsException
+                    ("Station with code " + station.getCode() + " already exists");
         }
 
         return stationRepository.save(station);

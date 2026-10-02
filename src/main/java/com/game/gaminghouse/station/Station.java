@@ -31,6 +31,13 @@ public class Station {
         return id;
     }
 
+    public StationType getType() {
+        return type;
+    }
+    public StationCondition getCondition() {
+        return condition;
+    }
+
 
     public Station (String code, StationType type, StationCondition condition) {
         this.code = code;
